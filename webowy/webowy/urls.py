@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import hello.views
+import kalkulator.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +27,5 @@ urlpatterns = [
     path('rozmowa', hello.views.rozmowa),
     path('rozmowa.html', hello.views.rozmowa_html),
     path('rozmowa2.html', hello.views.rozmowa_szablon),
-    path('kalkulator', hello.views.kalkulator),
+    path('kalkulator', kalkulator.views.kalkulator),
 ]
