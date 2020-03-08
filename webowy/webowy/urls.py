@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello', hello.views.wypisz_hello),
     path('ping', hello.views.ping),
+    path('rozmowa', hello.views.rozmowa),
 ]
