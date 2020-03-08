@@ -1,1 +1,7 @@
+# Jeśli jesteśmy poza PyCharmem, to najpierw tworzymy i aktuwujemy venv
+
 pip install django
+
+django-admin startproject webowy
+cd webowy
+# A w Pycharm dodatkowo: "Mark Directory As Sources Root"
