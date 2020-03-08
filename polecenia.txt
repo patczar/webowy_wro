@@ -24,3 +24,12 @@ python manage.py startapp hello
 
 # Gdy chcemy obsłużyć nowy adres, dopisujemy odpowiednie mapowanie do urls.py.
 
+# Gdy aplikacja używa modelu, to:
+# Definiujemy klasy w models.py
+# Rejejestrujemy je w admin.py
+# i wykonujemy w konsoli:
+python manage.py makemigrations     # przygotowuje skrypty SQL
+python manage.py migrate            # wykonuje skrypty SQL
+
+# utworzenie użytkownika - na potrzeby modułu admin
+python manage.py createsuperuser
