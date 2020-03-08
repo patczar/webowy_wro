@@ -1,8 +1,8 @@
+from .views import *
 from django.urls import path
 
-import kalkulator.views
-
 urlpatterns = [
-    path('v1', kalkulator.views.kalkulator),
-
+    path('', kalkulator2),
+    path('v1', kalkulator1),
+    path('v2', kalkulator2),
 ]
