@@ -94,3 +94,18 @@ def rozmowa_szablon(request:HttpRequest) -> HttpResponse:
     # przekazuje się jako parametr context, który ma być słownikiem.
     return render(request=request, template_name='szablon_rozmowa.html',
                   context={'tekst': powitanie})
+
+
+def kalkulator(request:HttpRequest) -> HttpResponse:
+    arg1 = request.GET.get('arg1')
+    arg2 = request.GET.get('arg2')
+
+    if arg1 and arg2:
+        liczba1 = int(arg1)
+        liczba2 = int(arg2)
+        wynik = liczba1 + liczba2
+    else:
+        wynik = 0
+
+    return render(request=request, template_name='kalkulator.html',
+                  context={'wynik': wynik})

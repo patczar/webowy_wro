@@ -26,4 +26,5 @@ urlpatterns = [
     path('rozmowa', hello.views.rozmowa),
     path('rozmowa.html', hello.views.rozmowa_html),
     path('rozmowa2.html', hello.views.rozmowa_szablon),
+    path('kalkulator', hello.views.kalkulator),
 ]
