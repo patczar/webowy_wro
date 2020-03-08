@@ -13,8 +13,12 @@ def adres_klienta(request: HttpRequest):
 
 
 def wypisz_hello(request):
-    print('ping')
+    # print('ping')
     return HttpResponse('Hello world')
+
+
+def wypisz_hello_html(request):
+    return HttpResponse('<html><body><p style="color:blue; font-weight:bold">Hello world</p></body><html>')
 
 
 # tutaj używam "type hints", aby edytor lepiej podpowiadał, co mogę zrobić z danym parametrem
@@ -36,4 +40,41 @@ def rozmowa(request: HttpRequest) -> HttpResponse:
         tekst = 'Podaj swoje imię w parametrze imie'
     return HttpResponse(content=tekst, content_type='text/plain;charset=utf-8')
 
+
+def rozmowa_html(request: HttpRequest) -> HttpResponse:
+    imie = request.GET.get('imie')
+
+    if imie:
+        powitanie = f'<div class="powitanie">Witaj {imie}!</div>'
+    else:
+        powitanie = ''
+
+    html = f'''<!DOCTYPE html>
+<html>
+<head>
+<title>Rozmowa z Pythonem</title>
+<style type="text/css">
+body {{
+    background-color: #FFFFAA;
+}}
+.powitanie {{
+    background-color: #FFFFFF;
+    border: 2px solid blue;
+    padding: 1em;
+    margin: 2em;
+}}
+</style>
+</head>
+<body>
+<h1>Rozmowa z Pythonem</h1>
+<form>
+<p>Jak masz na imię?</p>
+<input type="text" name="imie">
+<button>OK</button>
+</form>
+{powitanie}
+</body>
+</html>
+'''
+    return HttpResponse(content=html, content_type='text/html;charset=utf-8')
 

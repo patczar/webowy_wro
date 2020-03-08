@@ -20,6 +20,8 @@ import hello.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello', hello.views.wypisz_hello),
+    path('hello.html', hello.views.wypisz_hello_html),
     path('ping', hello.views.ping),
     path('rozmowa', hello.views.rozmowa),
+    path('rozmowa.html', hello.views.rozmowa_html),
 ]
