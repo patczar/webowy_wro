@@ -20,4 +20,5 @@ import hello.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello', hello.views.wypisz_hello),
+    path('ping', hello.views.ping),
 ]
