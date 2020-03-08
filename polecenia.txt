@@ -5,3 +5,14 @@ pip install django
 django-admin startproject webowy
 cd webowy
 # A w Pycharm dodatkowo: "Mark Directory As Sources Root"
+
+
+# Za każdym razem, gdy chcemy uruchomić (przetestować) aplikację:
+python manage.py runserver
+
+# Po utworzeniu projektu oraz po utworzeniu lub zmianie w modelu jakieś aplikacji,
+# należy wykonać polecenia:
+python manage.py makemigrations     # przygotowuje skrypty SQL
+python manage.py migrate            # wykonuje skrypty SQL
+
+
