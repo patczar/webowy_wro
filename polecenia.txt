@@ -17,3 +17,10 @@ python manage.py migrate            # wykonuje skrypty SQL
 
 # Utworzenie aplikacji o nazwie 'hello' w ramach naszego projektu
 python manage.py startapp hello
+
+# Po utworzeniu aplikacji, aby była ona widoczna (aby działała w ramach projektu)
+# należy wyedytować plik setting.py (w katalogu projektu)
+# i do INSTALLED_APPS dodać tę aplikację.
+
+# Gdy chcemy obsłużyć nowy adres, dopisujemy odpowiednie mapowanie do urls.py.
+
