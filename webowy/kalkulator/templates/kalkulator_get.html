@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator</title>
+
+</head>
+<body>
+<h1>Kalkulator ze szkolenia</h1>
+<p>Podaj dwie liczby i wybierz działanie:</p>
+<form method="get">
+    <input type="number" name="arg1"><br>
+    <input type="number" name="arg2"><br>
+    Wybierz działanie: <select name="operacja">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="^">^</option>
+    </select>
+    <button>Oblicz</button>
+
+<div class="wynik">
+Wynik: {{wynik}}
+</div>
+
+</form>
+</body>
+</html>

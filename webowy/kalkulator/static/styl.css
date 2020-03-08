@@ -1,0 +1,26 @@
+body {
+    background-color: #FFFFDD;
+    font-size: 14pt;
+}
+
+h1 {
+    color: green;
+}
+
+.wynik {
+    font-size: larger;
+    background-color: white;
+    border: outset blue 4px;
+    margin: 50px auto;
+    padding: 1em;
+    width: 400px;
+    text-align: center;
+}
+
+form {
+    background-color: white;
+    border: solid black 2px;
+    margin: 50px auto;
+    padding: 20px;
+    width: 600px;
+}
