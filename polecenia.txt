@@ -15,4 +15,5 @@ python manage.py runserver
 python manage.py makemigrations     # przygotowuje skrypty SQL
 python manage.py migrate            # wykonuje skrypty SQL
 
-
+# Utworzenie aplikacji o nazwie 'hello' w ramach naszego projektu
+python manage.py startapp hello
