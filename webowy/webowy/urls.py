@@ -21,7 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello', hello.views.wypisz_hello),
     path('hello.html', hello.views.wypisz_hello_html),
+    path('hello_szablon', hello.views.wypisz_hello_szablon),
     path('ping', hello.views.ping),
     path('rozmowa', hello.views.rozmowa),
     path('rozmowa.html', hello.views.rozmowa_html),
+    path('rozmowa2.html', hello.views.rozmowa_szablon),
 ]

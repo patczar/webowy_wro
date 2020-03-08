@@ -21,6 +21,11 @@ def wypisz_hello_html(request):
     return HttpResponse('<html><body><p style="color:blue; font-weight:bold">Hello world</p></body><html>')
 
 
+def wypisz_hello_szablon(request):
+    # W celu wygenerowania odpowiedzi używamy wskazanego szablonu.
+    return render(request=request, template_name='szablon_hello.html')
+
+
 # tutaj używam "type hints", aby edytor lepiej podpowiadał, co mogę zrobić z danym parametrem
 def ping(request: HttpRequest) -> HttpResponse:
     godzina:str = datetime.now().strftime('%H:%M:%S')
@@ -78,3 +83,14 @@ body {{
 '''
     return HttpResponse(content=html, content_type='text/html;charset=utf-8')
 
+
+def rozmowa_szablon(request:HttpRequest) -> HttpResponse:
+    imie = request.GET.get('imie')
+    if imie:
+        powitanie = f'Witaj {imie}!'
+    else:
+        powitanie = ''
+    # Dane do umieszczenia na stronie (aby szablon mógł je wstawić)
+    # przekazuje się jako parametr context, który ma być słownikiem.
+    return render(request=request, template_name='szablon_rozmowa.html',
+                  context={'tekst': powitanie})
